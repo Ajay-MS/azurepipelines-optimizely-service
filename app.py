@@ -6,7 +6,7 @@ import azurepipelines_optimizely_sdk as aps
 
 # Values to modify
 PROJECT_ID = "12098094739"
-EXPERIMENT_KEY = "Model_experiment"
+EXPERIMENT_KEY = "Model_Experiment"
 
 
 apOptimizelySdk = aps.AzurePipelinesOptimizelySdk(PROJECT_ID, EXPERIMENT_KEY)
