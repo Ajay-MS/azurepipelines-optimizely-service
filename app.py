@@ -8,14 +8,12 @@ import azurepipelines_optimizely_sdk as aps
 PROJECT_ID = "12098094739"
 EXPERIMENT_KEY = "Model_Experiment"
 
-
-apOptimizelySdk = aps.AzurePipelinesOptimizelySdk(PROJECT_ID, EXPERIMENT_KEY)
-
 app = Flask(__name__)
 
 @app.route("/azurepipelinesoptimizely/variation")
 def variations():
     uid = request.args.get('uid')
+    apOptimizelySdk = aps.AzurePipelinesOptimizelySdk(PROJECT_ID, EXPERIMENT_KEY)
     print(uid)
     variationKey = apOptimizelySdk.getVariationKey(uid)
     print(variationKey)
